@@ -49,7 +49,7 @@ android {
         buildConfigField 'String', 'GET_SINGLE_SERVER_METHOD', methods.getSingleServerMethod
 
         firebaseAppDistribution {
-            serviceCredentialsFile = "$rootDir/app/vpnbeast-android-6f673-7a6b9c6253df.json"
+            serviceCredentialsFile = "$rootDir/app/vpnbeast-android-6f673-5ba69b21279b.json"
             // releaseNotesFile = "$rootDir/app/release_notes.txt"
             testers = "bilalccaliskan@gmail.com"
         }
@@ -86,7 +86,6 @@ android {
 
         prod {
             dimension "default"
-
             buildConfigField 'String', 'DOMAIN', domains.prodDomain
             buildConfigField 'String', 'DO_LOGIN_URI', uris.doLoginUri
             buildConfigField 'String', 'DO_REFRESH_URI', uris.doRefreshUri
@@ -128,14 +127,14 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.loopj.android:android-async-http:1.4.9'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation group: 'junit', name: 'junit', version: '4.13'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
     implementation 'com.google.android.gms:play-services-gcm:17.0.0'
-    implementation 'com.google.android.gms:play-services-location:17.0.0'
-    implementation 'com.google.firebase:firebase-crashlytics:17.1.1'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.1'
     compile 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.6'

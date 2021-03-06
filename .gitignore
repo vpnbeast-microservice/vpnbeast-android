@@ -89,6 +89,6 @@ lint/tmp/
 # lint/reports/
 
 app/google-services.json
-app/vpnbeast-android-6f673-7a6b9c6253df.json
-app/private_key.pepk
+app/vpnbeast-android-6f673-5ba69b21279b.json
+app/upload-keystore.jks
 app/keystore.properties
