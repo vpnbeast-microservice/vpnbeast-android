@@ -12,7 +12,7 @@ ext.java = [
 ]
 
 ext.domains = [
-        devDomain : '"http://192.168.1.104:9090"',
+        devDomain : '"http://192.168.1.41:9090"',
         prodDomain : '"https://api.thevpnbeast.com"'
 ]
 
