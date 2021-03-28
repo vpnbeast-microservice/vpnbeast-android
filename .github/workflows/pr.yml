@@ -35,12 +35,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Get required files from repository secrets
-          run: |
-            echo "${{ secrets.KEYSTORE_PROPERTIES }}" > app/keystore.properties
-            echo "${{ secrets.GOOGLE_SERVICES }}" > app/google-services.json
-            echo "${{ secrets.GOOGLE_SERVICE_ACCOUNT }}" > app/vpnbeast-android-6f673-5ba69b21279b.json
-            echo "${{ secrets.UPLOAD_KEYSTORE }}" > app/upload-keystore.jks.asc
-            gpg -d --passphrase "${{ secrets.UPLOAD_KEYSTORE_PASSPHRASE }}" --batch app/upload-keystore.jks.asc > app/upload-keystore.jks
+        run: |
+          echo "${{ secrets.KEYSTORE_PROPERTIES }}" > app/keystore.properties
+          echo "${{ secrets.GOOGLE_SERVICES }}" > app/google-services.json
+          echo "${{ secrets.GOOGLE_SERVICE_ACCOUNT }}" > app/vpnbeast-android-6f673-5ba69b21279b.json
+          echo "${{ secrets.UPLOAD_KEYSTORE }}" > app/upload-keystore.jks.asc
+          gpg -d --passphrase "${{ secrets.UPLOAD_KEYSTORE_PASSPHRASE }}" --batch app/upload-keystore.jks.asc > app/upload-keystore.jks
       - name: Set up our JDK environment
         uses: actions/setup-java@v1.4.3
         with:
