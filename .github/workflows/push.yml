@@ -75,7 +75,7 @@ jobs:
         with:
           java-version: 1.8.0.282
       - name: Build Prod Release
-        run: /bin/bash scripts/build.sh $BUILD_TYPE $RELEASE_TYPE
+        run: /bin/bash scripts/build.sh $BUILD_TYPE $RELEASE_TYPE ${{ secrets.GITHUB_TOKEN }}
         env:
           BUILD_TYPE: "assembleProdRelease"
           RELEASE_TYPE: "appDistributionUploadProdRelease"
