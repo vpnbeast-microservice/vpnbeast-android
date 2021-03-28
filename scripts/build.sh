@@ -13,12 +13,10 @@ function git_global_settings() {
     git config --global user.email "${EMAIL}"
 }
 
-function set_release_version() {
-    local version_minor
+function get_release_version() {
+    local version_major, version_minor, version_patch
     version_minor=$(grep 'VERSION_MINOR' version.properties | awk -F '=' '{ print $2 }')
-    local version_major
     version_major=$(grep 'VERSION_MAJOR' version.properties | awk -F '=' '{ print $2 }')
-    local version_patch
     version_patch=$(grep 'VERSION_PATCH' version.properties | awk -F '=' '{ print $2 }')
     echo "${version_major}.${version_minor}.${version_patch}"
 }
@@ -33,7 +31,7 @@ function git_commit_and_push() {
 }
 
 BRANCH=master
-RELEASE_VERSION=$(set_release_version)
+RELEASE_VERSION=$(get_release_version)
 BUILD_METHOD=${1}
 RELEASE_METHOD=${2}
 
