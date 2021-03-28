@@ -5,17 +5,16 @@ on:
   pull_request:
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set up our JDK environment
-        uses: actions/setup-java@v1.4.3
-        with:
-          java-version: 1.8
-      - name: Lint
-        run: ./gradlew -Pci --console=plain :app:lintProdDebug -PbuildDir=lint
+#  lint:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      - name: Set up our JDK environment
+#        uses: actions/setup-java@v1.4.3
+#        with:
+#          java-version: 1.8
+#      - name: Lint
 #        uses: eskatos/gradle-command-action@v1
 #        with:
 #          arguments: -Pci --console=plain :app:lintProdDebug -PbuildDir=lint
@@ -33,8 +32,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Lint
-        run: ./gradlew -Pci --console=plain :app:testProdDebug
-#        uses: eskatos/gradle-command-action@v1
-#        with:
-#          arguments: -Pci --console=plain :app:testProdDebug
-#          gradle-executable: ./gradlew
+        uses: eskatos/gradle-command-action@v1
+        with:
+          arguments: -Pci --console=plain :app:testProdDebug
+          gradle-executable: ./gradlew
