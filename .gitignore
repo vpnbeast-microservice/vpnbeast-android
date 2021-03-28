@@ -92,4 +92,5 @@ lint/tmp/
 app/google-services.json
 app/vpnbeast-android-6f673-5ba69b21279b.json
 app/upload-keystore.jks
+app/upload-keystore.jks.asc
 app/keystore.properties
