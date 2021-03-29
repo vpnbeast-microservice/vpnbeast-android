@@ -9,14 +9,13 @@ import androidx.core.content.ContextCompat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class PermissionUtil {
 
     private static final int REQUEST_CODE_ASK_PERMISSIONS = 1;
-
-    private PermissionUtil() {
-
-    }
 
     public static void checkPermissions(Context context, String[] requiredPermissions) {
         final List<String> missingPermissions = new ArrayList<>();

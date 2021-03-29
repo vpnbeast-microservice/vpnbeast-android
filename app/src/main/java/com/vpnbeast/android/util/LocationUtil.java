@@ -8,13 +8,11 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import com.vpnbeast.android.activity.LoginActivity;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class LocationUtil {
-
-    private static final String TAG = "LocationUtil";
-
-    private LocationUtil() {
-
-    }
 
     public static boolean isLocationPermitted(Context context) {
         final int locationPermissionCheck = ContextCompat.checkSelfPermission(context,

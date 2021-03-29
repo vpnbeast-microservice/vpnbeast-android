@@ -5,14 +5,13 @@ import android.content.SharedPreferences;
 import com.google.gson.Gson;
 import com.vpnbeast.android.model.entity.Server;
 import com.vpnbeast.android.model.entity.User;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class PreferencesUtil {
 
     private static final Gson gson = new Gson();
-
-    private PreferencesUtil() {
-
-    }
 
     public static SharedPreferences getDefaultSharedPreferences(Context c) {
         return c.getSharedPreferences(c.getPackageName() + "_preferences",

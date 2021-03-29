@@ -12,13 +12,12 @@ import android.widget.EditText;
 import com.vpnbeast.android.R;
 import com.vpnbeast.android.model.enums.AppConstants;
 import com.vpnbeast.android.model.enums.EmailType;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 @SuppressLint("InflateParams")
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ViewUtil {
-
-    private ViewUtil() {
-
-    }
 
     public static void showSingleButtonAlertDialog(Context context, String title, String errorMessage,
                                                    DialogInterface.OnClickListener onClickListener) {

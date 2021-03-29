@@ -5,12 +5,11 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import com.vpnbeast.android.R;
 import java.util.Objects;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class NetworkUtil {
-
-    private NetworkUtil() {
-
-    }
 
     private static boolean isNetworkAvailable(Context context) {
         final ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));

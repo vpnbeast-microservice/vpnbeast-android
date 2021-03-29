@@ -19,13 +19,13 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ServiceUtil {
 
     private static final String TAG = "ServiceUtil";
-
-    private ServiceUtil() {
-
-    }
 
     public static JSONObject makeRequest(String urlString, String method, String token,
                                          JSONObject requestObject) {

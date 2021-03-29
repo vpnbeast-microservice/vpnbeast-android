@@ -23,16 +23,15 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class PersistenceUtil {
 
     private static final String TAG = "PersistenceUtil";
     private static final String SELECTED_SERVER_FILENAME = "server.data";
     private static final String ALL_SERVERS_FILENAME = "servers.data";
-
-    private PersistenceUtil() {
-
-    }
 
     public static List<Server> readAllServers(Context context) {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(new File(context
