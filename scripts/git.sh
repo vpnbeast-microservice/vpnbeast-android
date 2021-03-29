@@ -15,7 +15,6 @@ function git_commit_and_push() {
 }
 
 function get_release_version() {
-    local version_major, version_minor, version_patch
     version_minor=$(grep 'VERSION_MINOR' version.properties | awk -F '=' '{ print $2 }')
     version_major=$(grep 'VERSION_MAJOR' version.properties | awk -F '=' '{ print $2 }')
     version_patch=$(grep 'VERSION_PATCH' version.properties | awk -F '=' '{ print $2 }')
