@@ -28,5 +28,8 @@ USERNAME=vpnbeast-ci
 GIT_ACCESS_TOKEN=${1}
 EMAIL=info@thevpnbeast.com
 BRANCH=master
-RELEASE_VERSION=$(get_release_version)
 PUSH_URL=https://${USERNAME}:${GIT_ACCESS_TOKEN}@github.com/vpnbeast/${PROJECT_NAME}.git
+RELEASE_VERSION=$(get_release_version)
+
+git_global_settings
+git_commit_and_push
