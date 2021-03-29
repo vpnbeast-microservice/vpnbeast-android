@@ -62,6 +62,7 @@ captures/
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
 .cxx/
+app/lint
 
 # Google Services (e.g. APIs or Firebase)
 # google-services.json
@@ -91,4 +92,7 @@ lint/tmp/
 app/google-services.json
 app/vpnbeast-android-6f673-5ba69b21279b.json
 app/upload-keystore.jks
+app/upload-keystore.jks.asc
 app/keystore.properties
+app/vpnbeast-android-6f673-5ba69b21279b.json.asc
+app/google-services.json.asc
