@@ -15,12 +15,14 @@ function git_commit_and_push() {
 }
 
 function get_release_version() {
-    version_minor=$(grep 'VERSION_MINOR' version.properties | awk -F '=' '{ print $2 }')
+    local version_major, version_minor, version_patch
     version_major=$(grep 'VERSION_MAJOR' version.properties | awk -F '=' '{ print $2 }')
+    version_minor=$(grep 'VERSION_MINOR' version.properties | awk -F '=' '{ print $2 }')
     version_patch=$(grep 'VERSION_PATCH' version.properties | awk -F '=' '{ print $2 }')
     echo "${version_major}.${version_minor}.${version_patch}"
 }
 
+set -ex
 PROJECT_NAME=vpnbeast-android
 USERNAME=vpnbeast-ci
 GIT_ACCESS_TOKEN=${1}
