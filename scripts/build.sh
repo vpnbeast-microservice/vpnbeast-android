@@ -9,7 +9,7 @@ function post_release() {
 }
 
 function git_global_settings() {
-    git config --global user.userName "${USERNAME}"
+    git config --global user.name "${USERNAME}"
     git config --global user.email "${EMAIL}"
 }
 
